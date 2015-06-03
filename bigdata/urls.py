@@ -19,4 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^cococloud/', include('cococloud.urls')),
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    url('^', include('django.contrib.auth.urls')),
 ]
